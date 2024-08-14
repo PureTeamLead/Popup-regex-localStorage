@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="styles/output.css" />
+		<title>Popup || Max</title>
+	</head>
+	<body>
+		<div class="bg-gray-200 h-screen flex justify-center items-center">
+			<div class="bg-white w-fit text-center p-10 border-none rounded-xl">
+				<h1 class="text-7xl mb-16">Registration Form</h1>
+				<form action="" class="flex flex-col gap-7 px-16" id="main-form">
+					<input
+						type="text"
+						required
+						id="name-input"
+						placeholder="Enter username"
+						class="bg-gray-200 rounded-md p-2 text-black outline-none placeholder:text-black/50 focus:placeholder:text-gray-200"
+					/>
+
+					<input
+						class="bg-gray-200 rounded-md p-2 text-black outline-none placeholder:text-black/50 focus:placeholder:text-gray-200"
+						type="password"
+						required
+						id="password-input"
+						placeholder="Enter password"
+					/>
+
+					<input
+						class="bg-gray-200 rounded-md p-2 text-black outline-none placeholder:text-black/50 focus:placeholder:text-gray-200"
+						type="password"
+						required
+						id="password-again-input"
+						placeholder="Enter password again"
+					/>
+
+					<button
+						class="bg-gray-500 w-fit px-10 py-2 rounded-xl mx-auto text-white duration-300 transition-all hover:scale-90 hover:bg-gray-500/80"
+						type="submit"
+						id="sub-btn"
+					>
+						Submit
+					</button>
+				</form>
+			</div>
+
+			<dialog class="bg-white p-10 rounded-xl text-center text-black" id="wrong-input-modal">
+				<form method="dialog">
+					<h2 class="text-4xl mb-6 font-bold outline-none border-none">Wrong info</h2>
+					<i class="bx bxs-sad text-red-700 text-5xl mb-6"></i>
+					<p id="wrong-modal-reason"></p>
+					<button
+						type="button"
+						class="rounded-xl mt-5 w-fit px-10 py-2 text-white duration-300 transition-all bg-red-600 hover:bg-red-600/80 hover:scale-90 border-none outline-none"
+						id="again-btn"
+					>
+						Try Again
+					</button>
+				</form>
+			</dialog>
+
+			<dialog class="bg-white p-10 rounded-xl text-center text-black" id="right-input-modal">
+				<form method="dialog">
+					<h2 class="text-4xl mb-6 font-bold outline-none border-none">All good</h2>
+					<i class="bx bxs-smile text-green-700 mb-6 text-5xl"></i>
+					<p>Thank you for your registration</p>
+				</form>
+			</dialog>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
